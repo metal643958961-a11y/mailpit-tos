@@ -1,0 +1,182 @@
+[zh-cn]
+name = "Mailpit"
+auth = "316z666"
+descript = "捕获 NAS 本机应用发出的 SMTP 测试邮件，在网页收件箱检查内容。"
+important = "先在应用 config 目录创建 auth.htpasswd 账户文件，确保 UID 1000 可读且可写 data 目录，然后启动。仅在受信任网络访问，本机 SMTP 端口 11025。"
+release_note = "首个 x86_64 Beta 适配包，基于稳定版 Mailpit v1.33.0。"
+
+[zh-hk]
+name = "Mailpit"
+auth = "316z666"
+descript = "擷取 NAS 本機應用程式送出的 SMTP 測試郵件，在網頁收件匣檢視內容。"
+important = "啟動前請在應用程式 config 目錄建立 auth.htpasswd 帳戶檔案，確保 UID 1000 可讀取且可寫入 data 目錄。僅在受信任網路存取，本機 SMTP 連接埠為 11025。"
+release_note = "首個 x86_64 Beta 適配套件，採用穩定版 Mailpit v1.33.0。"
+
+[en-us]
+name = "Mailpit"
+auth = "316z666"
+descript = "Capture SMTP test messages from this NAS and inspect them in the web inbox."
+important = "Before starting, provide config/auth.htpasswd for the inbox and a writable data directory (UID 1000). Use a trusted network. Local SMTP port: 11025."
+release_note = "First x86_64 beta package of Mailpit v1.33.0."
+
+[ko-kr]
+name = "Mailpit"
+auth = "316z666"
+descript = "Capture SMTP test messages from this NAS and inspect them in the web inbox."
+important = "Before starting, provide config/auth.htpasswd for the inbox and a writable data directory (UID 1000). Use a trusted network. Local SMTP port: 11025."
+release_note = "First x86_64 beta package of Mailpit v1.33.0."
+
+[ja-jp]
+name = "Mailpit"
+auth = "316z666"
+descript = "Capture SMTP test messages from this NAS and inspect them in the web inbox."
+important = "Before starting, provide config/auth.htpasswd for the inbox and a writable data directory (UID 1000). Use a trusted network. Local SMTP port: 11025."
+release_note = "First x86_64 beta package of Mailpit v1.33.0."
+
+[de-de]
+name = "Mailpit"
+auth = "316z666"
+descript = "Capture SMTP test messages from this NAS and inspect them in the web inbox."
+important = "Before starting, provide config/auth.htpasswd for the inbox and a writable data directory (UID 1000). Use a trusted network. Local SMTP port: 11025."
+release_note = "First x86_64 beta package of Mailpit v1.33.0."
+
+[fr-fr]
+name = "Mailpit"
+auth = "316z666"
+descript = "Capture SMTP test messages from this NAS and inspect them in the web inbox."
+important = "Before starting, provide config/auth.htpasswd for the inbox and a writable data directory (UID 1000). Use a trusted network. Local SMTP port: 11025."
+release_note = "First x86_64 beta package of Mailpit v1.33.0."
+
+[it-it]
+name = "Mailpit"
+auth = "316z666"
+descript = "Capture SMTP test messages from this NAS and inspect them in the web inbox."
+important = "Before starting, provide config/auth.htpasswd for the inbox and a writable data directory (UID 1000). Use a trusted network. Local SMTP port: 11025."
+release_note = "First x86_64 beta package of Mailpit v1.33.0."
+
+[es-es]
+name = "Mailpit"
+auth = "316z666"
+descript = "Capture SMTP test messages from this NAS and inspect them in the web inbox."
+important = "Before starting, provide config/auth.htpasswd for the inbox and a writable data directory (UID 1000). Use a trusted network. Local SMTP port: 11025."
+release_note = "First x86_64 beta package of Mailpit v1.33.0."
+
+[hu-hu]
+name = "Mailpit"
+auth = "316z666"
+descript = "Capture SMTP test messages from this NAS and inspect them in the web inbox."
+important = "Before starting, provide config/auth.htpasswd for the inbox and a writable data directory (UID 1000). Use a trusted network. Local SMTP port: 11025."
+release_note = "First x86_64 beta package of Mailpit v1.33.0."
+
+[pl-pl]
+name = "Mailpit"
+auth = "316z666"
+descript = "Capture SMTP test messages from this NAS and inspect them in the web inbox."
+important = "Before starting, provide config/auth.htpasswd for the inbox and a writable data directory (UID 1000). Use a trusted network. Local SMTP port: 11025."
+release_note = "First x86_64 beta package of Mailpit v1.33.0."
+
+[tr-tr]
+name = "Mailpit"
+auth = "316z666"
+descript = "Capture SMTP test messages from this NAS and inspect them in the web inbox."
+important = "Before starting, provide config/auth.htpasswd for the inbox and a writable data directory (UID 1000). Use a trusted network. Local SMTP port: 11025."
+release_note = "First x86_64 beta package of Mailpit v1.33.0."
+
+[ru-ru]
+name = "Mailpit"
+auth = "316z666"
+descript = "Capture SMTP test messages from this NAS and inspect them in the web inbox."
+important = "Before starting, provide config/auth.htpasswd for the inbox and a writable data directory (UID 1000). Use a trusted network. Local SMTP port: 11025."
+release_note = "First x86_64 beta package of Mailpit v1.33.0."
+
+[pt-pt]
+name = "Mailpit"
+auth = "316z666"
+descript = "Capture SMTP test messages from this NAS and inspect them in the web inbox."
+important = "Before starting, provide config/auth.htpasswd for the inbox and a writable data directory (UID 1000). Use a trusted network. Local SMTP port: 11025."
+release_note = "First x86_64 beta package of Mailpit v1.33.0."
+
+[cs-cz]
+name = "Mailpit"
+auth = "316z666"
+descript = "Capture SMTP test messages from this NAS and inspect them in the web inbox."
+important = "Before starting, provide config/auth.htpasswd for the inbox and a writable data directory (UID 1000). Use a trusted network. Local SMTP port: 11025."
+release_note = "First x86_64 beta package of Mailpit v1.33.0."
+
+[da-dk]
+name = "Mailpit"
+auth = "316z666"
+descript = "Capture SMTP test messages from this NAS and inspect them in the web inbox."
+important = "Before starting, provide config/auth.htpasswd for the inbox and a writable data directory (UID 1000). Use a trusted network. Local SMTP port: 11025."
+release_note = "First x86_64 beta package of Mailpit v1.33.0."
+
+[nl-nl]
+name = "Mailpit"
+auth = "316z666"
+descript = "Capture SMTP test messages from this NAS and inspect them in the web inbox."
+important = "Before starting, provide config/auth.htpasswd for the inbox and a writable data directory (UID 1000). Use a trusted network. Local SMTP port: 11025."
+release_note = "First x86_64 beta package of Mailpit v1.33.0."
+
+[nb-no]
+name = "Mailpit"
+auth = "316z666"
+descript = "Capture SMTP test messages from this NAS and inspect them in the web inbox."
+important = "Before starting, provide config/auth.htpasswd for the inbox and a writable data directory (UID 1000). Use a trusted network. Local SMTP port: 11025."
+release_note = "First x86_64 beta package of Mailpit v1.33.0."
+
+[sv-se]
+name = "Mailpit"
+auth = "316z666"
+descript = "Capture SMTP test messages from this NAS and inspect them in the web inbox."
+important = "Before starting, provide config/auth.htpasswd for the inbox and a writable data directory (UID 1000). Use a trusted network. Local SMTP port: 11025."
+release_note = "First x86_64 beta package of Mailpit v1.33.0."
+
+[el-gr]
+name = "Mailpit"
+auth = "316z666"
+descript = "Capture SMTP test messages from this NAS and inspect them in the web inbox."
+important = "Before starting, provide config/auth.htpasswd for the inbox and a writable data directory (UID 1000). Use a trusted network. Local SMTP port: 11025."
+release_note = "First x86_64 beta package of Mailpit v1.33.0."
+
+[ro-ro]
+name = "Mailpit"
+auth = "316z666"
+descript = "Capture SMTP test messages from this NAS and inspect them in the web inbox."
+important = "Before starting, provide config/auth.htpasswd for the inbox and a writable data directory (UID 1000). Use a trusted network. Local SMTP port: 11025."
+release_note = "First x86_64 beta package of Mailpit v1.33.0."
+
+[th-th]
+name = "Mailpit"
+auth = "316z666"
+descript = "Capture SMTP test messages from this NAS and inspect them in the web inbox."
+important = "Before starting, provide config/auth.htpasswd for the inbox and a writable data directory (UID 1000). Use a trusted network. Local SMTP port: 11025."
+release_note = "First x86_64 beta package of Mailpit v1.33.0."
+
+[vi-vn]
+name = "Mailpit"
+auth = "316z666"
+descript = "Capture SMTP test messages from this NAS and inspect them in the web inbox."
+important = "Before starting, provide config/auth.htpasswd for the inbox and a writable data directory (UID 1000). Use a trusted network. Local SMTP port: 11025."
+release_note = "First x86_64 beta package of Mailpit v1.33.0."
+
+[id-id]
+name = "Mailpit"
+auth = "316z666"
+descript = "Capture SMTP test messages from this NAS and inspect them in the web inbox."
+important = "Before starting, provide config/auth.htpasswd for the inbox and a writable data directory (UID 1000). Use a trusted network. Local SMTP port: 11025."
+release_note = "First x86_64 beta package of Mailpit v1.33.0."
+
+[ar-sa]
+name = "Mailpit"
+auth = "316z666"
+descript = "Capture SMTP test messages from this NAS and inspect them in the web inbox."
+important = "Before starting, provide config/auth.htpasswd for the inbox and a writable data directory (UID 1000). Use a trusted network. Local SMTP port: 11025."
+release_note = "First x86_64 beta package of Mailpit v1.33.0."
+
+[he-il]
+name = "Mailpit"
+auth = "316z666"
+descript = "Capture SMTP test messages from this NAS and inspect them in the web inbox."
+important = "Before starting, provide config/auth.htpasswd for the inbox and a writable data directory (UID 1000). Use a trusted network. Local SMTP port: 11025."
+release_note = "First x86_64 beta package of Mailpit v1.33.0."
+

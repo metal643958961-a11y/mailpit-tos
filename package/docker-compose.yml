@@ -1,0 +1,36 @@
+version: "3.8"
+services:
+  mailpit:
+    image: axllent/mailpit:v1.33.0@sha256:18156f9ee243aa339170ac33d09d6d5a80b10d9e06b265f90f223a777a8f4b73
+    container_name: mailpit
+    platform: linux/amd64
+    user: "1000:1000"
+    restart: unless-stopped
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    entrypoint: ["/bin/sh", "-ec"]
+    command:
+      - |
+        umask 077
+        cp /config/auth.htpasswd /tmp/mailpit-auth
+        grep -Eq '^[^:[:space:]]+:[^[:space:]]+' /tmp/mailpit-auth || { echo 'Configure config/auth.htpasswd before starting Mailpit' >&2; exit 1; }
+        exec /mailpit
+    environment:
+      MP_DATABASE: /data/mailpit.db
+      MP_UI_AUTH_FILE: /tmp/mailpit-auth
+      MP_DISABLE_VERSION_CHECK: "true"
+      MP_MAX_MESSAGES: "100"
+      MP_MAX_MESSAGE_SIZE: "5"
+    ports:
+      - "18025:8025"
+      - "127.0.0.1:11025:1025"
+    volumes:
+      - ./data:/data
+      - ./config:/config:ro
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,nodev,size=32m
+x-app-meta:
+  web:
+    port: 18025
+    protocol: http
