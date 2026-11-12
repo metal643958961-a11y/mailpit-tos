@@ -1,36 +1,72 @@
-version: "3.8"
+---
+version: '3.8'
 services:
+  initialize:
+    image: library/busybox:1.37.0-musl@sha256:5624bb6777cf469b1fb50ae3f981b15d2715ee2fffaf20b9998cfb7843726835
+    platform: linux/amd64
+    user: 1000:1000
+    read_only: true
+    cap_drop:
+    - ALL
+    security_opt:
+    - no-new-privileges:true
+    restart: 'no'
+    entrypoint:
+    - "/bin/sh"
+    - "-ec"
+    command:
+    - |
+      set -eu
+      umask 077
+      mkdir -p /tmp/private/data
+      if [ ! -s /tmp/private/password ]; then
+        temp=/tmp/private/password.$$$$
+        od -An -N32 -tx1 /dev/urandom | tr -d ' \n' > "$$temp"
+        ln "$$temp" /tmp/private/password || test -s /tmp/private/password
+        rm -f "$$temp"
+      fi
+      password=$$(cat /tmp/private/password)
+      [ "$${#password}" = 64 ]
+      hash=$$(cryptpw -m sha512 "$$password")
+      printf "inbox:%s\n" "$$hash" > /tmp/private/auth.htpasswd.tmp
+      mv /tmp/private/auth.htpasswd.tmp /tmp/private/auth.htpasswd
+    volumes:
+    - state:/tmp
+    mem_limit: 32m
+    pids_limit: 32
   mailpit:
     image: axllent/mailpit:v1.33.0@sha256:18156f9ee243aa339170ac33d09d6d5a80b10d9e06b265f90f223a777a8f4b73
     container_name: mailpit
     platform: linux/amd64
-    user: "1000:1000"
+    user: 1000:1000
     restart: unless-stopped
     read_only: true
-    cap_drop: [ALL]
-    security_opt: ["no-new-privileges:true"]
-    entrypoint: ["/bin/sh", "-ec"]
-    command:
-      - |
-        umask 077
-        cp /config/auth.htpasswd /tmp/mailpit-auth
-        grep -Eq '^[^:[:space:]]+:[^[:space:]]+' /tmp/mailpit-auth || { echo 'Configure config/auth.htpasswd before starting Mailpit' >&2; exit 1; }
-        exec /mailpit
+    cap_drop:
+    - ALL
+    security_opt:
+    - no-new-privileges:true
+    entrypoint:
+    - "/mailpit"
     environment:
-      MP_DATABASE: /data/mailpit.db
-      MP_UI_AUTH_FILE: /tmp/mailpit-auth
-      MP_DISABLE_VERSION_CHECK: "true"
-      MP_MAX_MESSAGES: "100"
-      MP_MAX_MESSAGE_SIZE: "5"
+      MP_DATABASE: "/state/private/data/mailpit.db"
+      MP_UI_AUTH_FILE: "/state/private/auth.htpasswd"
+      MP_DISABLE_VERSION_CHECK: 'true'
+      MP_MAX_MESSAGES: '100'
+      MP_MAX_MESSAGE_SIZE: '5'
     ports:
-      - "18025:8025"
-      - "127.0.0.1:11025:1025"
+    - 18025:8025
+    - 127.0.0.1:11025:1025
     volumes:
-      - ./data:/data
-      - ./config:/config:ro
+    - state:/state
     tmpfs:
-      - /tmp:rw,noexec,nosuid,nodev,size=32m
+    - "/tmp:rw,noexec,nosuid,nodev,size=32m"
+    depends_on:
+      initialize:
+        condition: service_completed_successfully
 x-app-meta:
   web:
     port: 18025
     protocol: http
+volumes:
+  state:
+    driver: local

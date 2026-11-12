@@ -1,0 +1,1 @@
+上游主应用许可原文见 licenses。新增初始化服务使用 Docker Official Image busybox:1.37.0-musl，遵循 GPL-2.0。对应源码 https://busybox.net/downloads/busybox-1.37.0.tar.bz2 ，官方镜像构建来源 https://github.com/docker-library/busybox 。应用包包含 Compose 引用，安装时获取上游原镜像，未修改或再分发 BusyBox 二进制。镜像具体摘要见 docker-compose.yml。
