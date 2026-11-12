@@ -1,6 +1,6 @@
 # 验证范围 · 2026-11-12
 
-mailpit 1.33.0.2：官方TOSAppSelfTestingTool静态检查通过；专用Linux x86_64 Docker首次初始化、认证、核心功能、重启、合成数据持久化及清理通过。固定镜像安全扫描HIGH/CRITICAL=0（数据库2026-11-12），不代表没有其他风险。
+mailpit 1.33.0.2：官方TOSAppSelfTestingTool静态检查通过；专用ARM64 Linux VM通过binfmt运行linux/amd64 Docker镜像：首次初始化、认证、核心功能、重启、合成数据持久化及清理通过。固定镜像安全扫描HIGH/CRITICAL=0（数据库2026-11-12），不代表没有其他风险。
 
 真实TOS应用中心安装、桌面入口、升级、卸载尚未验收。冷启动测试使用缓存镜像，历史TOS代理502尚未证实解除。旧版数据迁移与命名卷/绑定目录清理限制见README。
 
